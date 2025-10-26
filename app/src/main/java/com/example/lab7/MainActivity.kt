@@ -45,14 +45,28 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ListaRecetas() {
-    val recetas = List(20) { i ->
-        Receta(
-            nombre = "Receta ${i + 1}",
-            descripcion = "Descripción breve ${i + 1}",
-            categoria = if (i % 2 == 0) "Postre" else "Plato principal",
-            tiempo = "${15 + i} min"
-        )
-    }
+    val recetas = listOf(
+        Receta("Lomo Saltado", "Clásico plato peruano con carne, cebolla y tomate salteados al wok.", "Plato principal", "35 min"),
+        Receta("Causa Limeña", "Deliciosa entrada fría a base de papa amarilla, ají y limón.", "Entrada", "20 min"),
+        Receta("Aji de Gallina", "Guiso cremoso de pollo desmenuzado con pan y ají amarillo.", "Plato principal", "40 min"),
+        Receta("Arroz con Leche", "Postre tradicional con arroz, leche y canela.", "Postre", "30 min"),
+        Receta("Papa a la Huancaína", "Papas bañadas en salsa de queso y ají amarillo.", "Entrada", "25 min"),
+        Receta("Tallarines Verdes", "Pasta con salsa de albahaca, queso fresco y espinaca.", "Plato principal", "30 min"),
+        Receta("Mazamorra Morada", "Postre limeño a base de maíz morado y frutas secas.", "Postre", "35 min"),
+        Receta("Ceviche Clásico", "Pescado fresco marinado en limón, con cebolla y ají.", "Plato principal", "25 min"),
+        Receta("Anticuchos", "Brochetas de corazón de res sazonadas con ají panca.", "Plato principal", "45 min"),
+        Receta("Suspiro a la Limeña", "Postre con manjar blanco y merengue al oporto.", "Postre", "40 min"),
+        Receta("Chocoteja Casera", "Dulce relleno con manjar y cubierto de chocolate.", "Postre", "15 min"),
+        Receta("Ensalada Rusa", "Ensalada fría con papas, zanahoria, arvejas y mayonesa.", "Entrada", "20 min"),
+        Receta("Pollo al Horno", "Pollo marinado y horneado con hierbas y papas doradas.", "Plato principal", "50 min"),
+        Receta("Turrón de Doña Pepa", "Tradicional postre limeño con miel y grageas.", "Postre", "60 min"),
+        Receta("Chicha Morada", "Bebida refrescante de maíz morado, piña y canela.", "Bebida", "25 min"),
+        Receta("Leche de Tigre", "Extracto del ceviche, potente y lleno de sabor.", "Entrada", "10 min"),
+        Receta("Empanadas", "Masa rellena de carne, cebolla y huevo duro.", "Entrada", "30 min"),
+        Receta("Arroz Chaufa", "Fusión peruano-china con arroz frito, pollo y sillao.", "Plato principal", "35 min"),
+        Receta("Crema Volteada", "Postre tipo flan, suave y acaramelado.", "Postre", "45 min"),
+        Receta("Ocopa Arequipeña", "Papas bañadas con salsa de maní y ají mirasol.", "Entrada", "30 min")
+    )
 
     LazyColumn(
         modifier = Modifier
